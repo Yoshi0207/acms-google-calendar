@@ -13,7 +13,7 @@ class ServiceProvider extends ACMS_App
     public $author      = 'com.appleple';
     public $module      = false;
     public $menu        = 'google_calendar_index';
-    public $desc        = 'フォームの内容を Google Calendarに登録するためのアプリです。';
+    public $desc        = 'フォームの内容を Google Calendar に登録するためのアプリです。';
 
     /**
      * サービスの起動処理
@@ -35,6 +35,11 @@ class ServiceProvider extends ACMS_App
             $inject->add('admin-main', PLUGIN_DIR . 'GoogleCalendar/theme/callback.html');
         }
         $inject->add('admin-form', PLUGIN_DIR . 'GoogleCalendar/theme/form.html');
+
+        // モジュール追加
+        $inject->add('admin-module-config-GoogleCalendar_Events', PLUGIN_DIR . 'GoogleCalendar/theme/Events_body.html');
+        $inject->add('admin-module-config-GoogleCalendar_DayEvents', PLUGIN_DIR .'GoogleCalendar/theme/DayEvents_body.html');
+        $inject->add('admin-module-select', PLUGIN_DIR . 'GoogleCalendar/theme/select.user.html');
     }
     /**
      * インストールする前の環境チェック処理
