@@ -19,9 +19,9 @@
 &lt;!-- BEGIN_MODULE GoogleCalendar_Events --&gt;
   &lt;!-- BEGIN date_set --&gt;
   &lt;ul class="acms-text-center acms-list-inline"&gt;
-    &lt;li&gt;&lt;a href="http://acms.com/sample.html/{prevMonth}" class="acms-btn-flat" title="前月へ" &gt;«&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="http://acms.com/sample.html/{year}/{month}" class="acms-btn-flat" &gt;{month}月&lt;/a&gt;&lt;/li&gt;
-   &lt;li&gt;&lt;a href="http://acms.com/sample.html/{nextMonth}" class="acms-btn-flat" title="次月へ" &gt;»&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://acms.com/sample.html/\{prevMonth\}" class="acms-btn-flat" title="前月へ" &gt;«&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="http://acms.com/sample.html/\{year\}/\{month\}" class="acms-btn-flat" &gt;\{month\}月&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="http://acms.com/sample.html/\{nextMonth\}" class="acms-btn-flat" title="次月へ" &gt;»&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
   &lt;!-- END date_set --&gt;
   
@@ -29,8 +29,8 @@
     &lt;table class="acms-table acms-table-bordered calendarTable"&gt;
     &lt;!-- BEGIN events:loop --&gt;
     &lt;tr&gt;
-	  &lt;th&gt;{day}&lt;span class="text-muted"&gt;({week})&lt;/span&gt; {time}&lt;/th&gt;
-	  &lt;td&gt;{summary}&lt;a href="{url}" class="acms-icon acms-icon-time"&gt;&lt;/a&gt;&lt;/td&gt;
+	  &lt;th&gt;\{day\}&lt;span class="text-muted"&gt;(\{week\})&lt;/span&gt; \{time\}&lt;/th&gt;
+	  &lt;td&gt;\{summary\}&lt;a href="\{url\}" class="acms-icon acms-icon-time"&gt;&lt;/a&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;!-- END events:loop --&gt;
 	&lt;/table&gt;

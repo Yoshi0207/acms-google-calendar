@@ -13,3 +13,32 @@
 		  </tr>
 	</tbody>
 </table>
+
+<h3 class="acms-admin-admin-title2"></h3>スニペット </h3>
+<pre>
+&lt;!-- BEGIN_MODULE GoogleCalendar_DayEvents id="GoogleCalendarDayEventsTest" --&gt;
+  &lt;!-- BEGIN date_set --&gt;
+  &lt;ul class="acms-text-center acms-list-inline"&gt;
+    &lt;li&gt; &lt;a href="http://acms.com/sample.html/{prevDay}" class="acms-btn-flat" title="前日へ" &gt;« &lt;/a&gt; &lt;/li&gt;
+    &lt;li&gt; &lt;a href="http://acms.com/sample.html/{year}/{month}/{day}" class="acms-btn-flat" &gt;{month}/{day}日&lt;/a&gt; &lt;/li&gt;
+    &lt;li&gt; &lt;a href="http://acms.com/sample.html/{nextDay}" class="acms-btn-flat" title="翌日へ" &gt;» &lt;/a&gt; &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- END date_set --&gt;
+  
+  &lt;div class="acms-table-responsive"&gt;
+    &lt;table class="acms-table acms-table-bordered calendarTable"&gt;
+      &lt;!-- BEGIN events:loop --&gt;
+      &lt;tr&gt;
+        &lt;th&gt;{time}&lt;/th&gt;
+          &lt;td&gt;{summary} &lt;a href="{url}" class="acms-icon acms-icon-time"&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- END events:loop --&gt;
+      &lt;!-- BEGIN notFound --&gt;
+      &lt;tr&gt;
+        &lt;th&gt;イベントはありません&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;!-- END notFound --&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;!-- END_MODULE GoogleCalendar_DayEvents --&gt;
+</pre>

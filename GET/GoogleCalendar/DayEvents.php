@@ -131,6 +131,10 @@ class DayEvents extends ACMS_GET
             'events' => $eventsData,
             'count' => count($eventsData),
         );
+        if (empty($events)) {
+            $obj["notFound"] = (object)[];
+        }
+
         return $Tpl->render($obj);
     }
 }
