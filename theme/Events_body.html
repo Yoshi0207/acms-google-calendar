@@ -1,0 +1,52 @@
+<h3 class="acms-admin-admin-title2">表示設定</h3>
+
+<table class="adminTable acms-admin-table-admin-edit">
+	<tbody>
+        <tr>
+            <th>カレンダーID
+              <i class="acms-admin-icon-tooltip js-acms-tooltip" data-acms-tooltip="表示したいカレンダーのカレンダーIDを指定します。"></i>
+			</th>
+            <td>
+              <input type="text" name="calendarID" value="{calendarID}" class="acms-admin-form-width-full" />
+              <input type="hidden" name="config[]" value="calendarID" />
+            </td>
+		  </tr>
+	</tbody>
+</table>
+
+<h3 class="acms-admin-admin-title2"></h3>スニペット </h3>
+<pre>
+&lt;!-- BEGIN_MODULE GoogleCalendar_Events --&gt;
+&lt;div&gt;
+  &lt;!-- BEGIN date --&gt;
+  &lt;ul class="acms-text-center acms-list-inline"&gt;
+  &lt;li&gt; &lt;a href="%{BASE_URL}calendar.html/\{prevDate\}" class="acms-btn-flat" title="前月へ" &gt;« &lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt; &lt;a href="%{BASE_URL}calendar.html/\{year\}/\{month\}" class="acms-btn-flat" &gt;\{month\}月 &lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt; &lt;a href="%{BASE_URL}calendar.html/\{nextDate\}" class="acms-btn-flat" title="次月へ" &gt;» &lt;/a&gt; &lt;/li&gt;
+  &lt;/ul&gt; 
+  &lt;!-- END date --&gt;
+  &lt;div class="acms-table-responsive"&gt;
+	&lt;table class="acms-table acms-table-bordered calendarTable"&gt;
+	  &lt;!-- BEGIN week:loop --&gt;
+	  &lt;!-- BEGIN foreSpacer --&gt;
+	  &lt;tr class="acms-table-info"&gt;
+	    &lt;th &gt;\{prevDay\} &lt;span class="text-muted" &gt;（\{week\}） &lt;/span&gt; &lt;/th&gt;
+	    &lt;td&gt; &lt;!-- BEGIN foreEntry:loop --&gt; &lt;div &gt; &lt;!-- BEGIN url#front --&gt; &lt;a href="\{url\}" &gt; &lt;!-- END url#front --&gt;\{title\} &lt;!-- BEGIN url#rear --&gt; &lt;/a &gt; &lt;!-- END url#rear -- gt; &lt;/div &gt; &lt;!-- END foreEntry:loop --&gt; &lt;/td&gt;
+	  &lt;/tr &gt; &lt;!-- END foreSpacer --&gt;
+	  &lt;!-- BEGIN day:loop --&gt;
+	  &lt;tr &gt;
+	    &lt;th class="\{today\}" &gt;\{day\} &lt;span class="text-muted" &gt;（\{week\}） &lt;/span&gt; &lt;/th&gt;
+	    &lt;td &gt; &lt;!-- BEGIN entry:loop --&gt; &lt;div&gt; &lt;!-- BEGIN url#front --&gt; &lt;a href="\{url\}" &gt; &lt;!-- END url#front --&gt;\{title\} &lt;!-- BEGIN url#rear --&gt; &lt;/a &gt; &lt;!-- END url#rear --&gt; &lt;/div&gt; &lt;!-- END entry:loop --&gt; &lt;/td&gt;
+	  &lt;/tr &gt; &lt;!-- END day:loop --&gt;
+	  &lt;!-- BEGIN rearSpacer --&gt;
+	  &lt;tr class="acms-table-info" &gt;
+	    &lt;th &gt;\{nextDay\} &lt;span class="text-muted" &gt;（\{week\}） &lt;/span&gt; &lt;/th&gt;
+	    &lt;td&gt; &lt;!-- BEGIN rearEntry:loop --&gt; &lt;div&gt; &lt;!-- BEGIN url#front --&gt; &lt;a href="\{url\}" &gt; &lt;!-- END url#front --&gt;\{title\} &lt;!-- BEGIN url#rear --&gt; &lt;/a&gt; &lt;!-- END url#rear --&gt; &lt;/div&gt; &lt;!-- END rearEntry:loop--&gt; &lt;/td&gt;
+	  &lt;/tr&gt;
+	  &lt;!-- END rearSpacer --&gt;
+	  &lt;!-- END week:loop --&gt;
+	&lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;-- END_MODULE Entry_Calendar --&gt;	
+</pre>
